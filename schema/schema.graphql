@@ -1,0 +1,16 @@
+type Rating{
+    term:String!
+    url:String!
+    type:String!
+}
+
+type Query{
+    ratings:[Rating!]!
+    rating(id:ID):Rating
+
+}
+
+
+type Mutation{
+    createRating( term:String!, url:String!, type: String! ): Rating
+}
